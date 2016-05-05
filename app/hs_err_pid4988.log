@@ -1,0 +1,141 @@
+ (memory/allocation.inline.hpp:61), pid=4988, tid=8252
+#
+# JRE version:  (7.0_75-b13) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.75-b04 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000002590800):  JavaThread "main" [_thread_in_vm, id=8252, stack(0x00000000023e0000,0x00000000024e0000)]
+
+Stack: [0x00000000023e0000,0x00000000024e0000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  java.util.concurrent.locks.ReentrantLock.<init>()V+5
+j  java.util.concurrent.ConcurrentHashMap$Segment.<init>(FI[Ljava/util/concurrent/ConcurrentHashMap$HashEntry;)V+1
+j  java.util.concurrent.ConcurrentHashMap.<init>(IFI)V+149
+j  java.util.concurrent.ConcurrentHashMap.<init>()V+7
+j  java.lang.reflect.WeakCache.<init>(Ljava/lang/reflect/WeakCache$BiFunction;Ljava/lang/reflect/WeakCache$BiFunction;)V+20
+j  java.lang.reflect.Proxy.<clinit>()V+33
+v  ~StubRoutines::call_stub
+j  sun.reflect.misc.ReflectUtil.isNonPublicProxyClass(Ljava/lang/Class;)Z+30
+j  sun.reflect.misc.ReflectUtil.checkPackageAccess(Ljava/lang/Class;)V+8
+j  java.util.concurrent.atomic.AtomicReferenceFieldUpdater$AtomicReferenceFieldUpdaterImpl.<init>(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)V+37
+j  java.util.concurrent.atomic.AtomicReferenceFieldUpdater.newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;+10
+j  java.io.BufferedInputStream.<clinit>()V+14
+v  ~StubRoutines::call_stub
+j  java.lang.System.initializeSystemClass()V+70
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00000000084ee800 JavaThread "Finalizer" daemon [_thread_blocked, id=3280, stack(0x00000000097c0000,0x00000000098c0000)]
+  0x00000000084e5800 JavaThread "Reference Handler" daemon [_thread_blocked, id=5156, stack(0x00000000096c0000,0x00000000097c0000)]
+=>0x0000000002590800 JavaThread "main" [_thread_in_vm, id=8252, stack(0x00000000023e0000,0x00000000024e0000)]
+
+Other Threads:
+  0x00000000084e1800 VMThread [stack: 0x00000000095c0000,0x00000000096c0000] [id=5188]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000000000258be10] SystemDictionary_lock - owner thread: 0x0000000002590800
+
+Heap
+ PSYoungGen      total 38400K, used 1331K [0x00000000eaa80000, 0x00000000ed500000, 0x0000000100000000)
+  eden space 33280K, 4% used [0x00000000eaa80000,0x00000000eabccdb8,0x00000000ecb00000)
+  from space 5120K, 0% used [0x00000000ed000000,0x00000000ed000000,0x00000000ed500000)
+  to   space 5120K, 0% used [0x00000000ecb00000,0x00000000ecb00000,0x00000000ed000000)
+ ParOldGen       total 86528K, used 0K [0x00000000c0000000, 0x00000000c5480000, 0x00000000eaa80000)
+  object space 86528K, 0% used [0x00000000c0000000,0x00000000c0000000,0x00000000c5480000)
+ PSPermGen       total 21504K, used 1331K [0x00000000bae00000, 0x00000000bc300000, 0x00000000c0000000)
+  object space 21504K, 6% used [0x00000000bae00000,0x00000000baf4cfe8,0x00000000bc300000)
+
+Card table byte_map: [0x0000000005750000,0x0000000005980000] byte_map_base: 0x0000000005179000
+
+Polling page: 0x0000000000c20000
+
+Code Cache  [0x0000000002690000, 0x0000000002900000, 0x0000000005690000)
+ total_blobs=113 nmethods=0 adapters=90 free_code_cache=48799Kb largest_free_block=49970560
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (2 events):
+Event: 0.037 Thread 0x0000000002590800 Threw 0x00000000eaa8a570 at C:\re\jdk7u75\1940\hotspot\src\share\vm\prims\jni.cpp:3991
+Event: 0.054 Thread 0x0000000002590800 Threw 0x00000000eaa8f350 at C:\re\jdk7u75\1940\hotspot\src\share\vm\classfile\systemDictionary.cpp:183
+
+Events (10 events):
+Event: 0.053 loading class 0x000000000260fee0
+Event: 0.054 loading class 0x000000000260fee0 done
+Event: 0.054 loading class 0x0000000002610020
+Event: 0.054 loading class 0x0000000002610d40
+Event: 0.054 loading class 0x00000000026112f0
+Event: 0.054 loading class 0x00000000026112f0 done
+Event: 0.054 loading class 0x0000000002610d40 done
+Event: 0.054 loading class 0x0000000002610020 done
+Event: 0.054 loading class 0x0000000002611360
+Event: 0.054 loading class 0x0000000002611360 done
+
+
+Dynamic libraries:
+0x000007f734d40000 - 0x000007f734d73000 	C:\Program Files\Java\jdk1.7.0_75\bin\java.exe
+0x000007fb256f0000 - 0x000007fb258ae000 	C:\Windows\SYSTEM32\ntdll.dll
+0x000007fb24ad0000 - 0x000007fb24c06000 	C:\Windows\system32\KERNEL32.DLL
+0x000007fb226f0000 - 0x000007fb227e3000 	C:\Windows\system32\KERNELBASE.dll
+0x000007fb254a0000 - 0x000007fb2557e000 	C:\Windows\system32\ADVAPI32.dll
+0x000007fb240e0000 - 0x000007fb2422c000 	C:\Windows\system32\USER32.dll
+0x000007fb202f0000 - 0x000007fb20559000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.9200.16384_none_418c2a697189c07f\COMCTL32.dll
+0x000007fb25080000 - 0x000007fb25125000 	C:\Windows\system32\msvcrt.dll
+0x000007fb24c10000 - 0x000007fb24c58000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007fb252d0000 - 0x000007fb25410000 	C:\Windows\system32\RPCRT4.dll
+0x000007fb25580000 - 0x000007fb256c0000 	C:\Windows\system32\GDI32.dll
+0x000007fb25410000 - 0x000007fb25449000 	C:\Windows\system32\IMM32.DLL
+0x000007fb24c60000 - 0x000007fb24d74000 	C:\Windows\system32\MSCTF.dll
+0x0000000069100000 - 0x00000000691d2000 	C:\Program Files\Java\jdk1.7.0_75\jre\bin\msvcr100.dll
+0x0000000068920000 - 0x00000000690f4000 	C:\Program Files\Java\jdk1.7.0_75\jre\bin\server\jvm.dll
+0x000007fb1d0d0000 - 0x000007fb1d0d9000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x000007fb17650000 - 0x000007fb17670000 	C:\Windows\SYSTEM32\WINMM.dll
+0x000007fb24230000 - 0x000007fb24237000 	C:\Windows\system32\PSAPI.DLL
+0x000007fb24d80000 - 0x000007fb24dd8000 	C:\Windows\system32\WS2_32.dll
+0x000007fb17610000 - 0x000007fb17642000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x000007fb24620000 - 0x000007fb24629000 	C:\Windows\system32\NSI.dll
+0x0000000068910000 - 0x000000006891f000 	C:\Program Files\Java\jdk1.7.0_75\jre\bin\verify.dll
+0x00000000688e0000 - 0x0000000068908000 	C:\Program Files\Java\jdk1.7.0_75\jre\bin\java.dll
+0x00000000688c0000 - 0x00000000688d5000 	C:\Program Files\Java\jdk1.7.0_75\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Djava.awt.headless=true -Xmx1024M -Dfile.encoding=windows-1252 -Duser.country=US -Duser.language=en -Duser.variant 
+java_command: com.android.dx.command.Main --dex --force-jumbo --num-threads=4 --multi-dex --output C:\Users\MugenKlaus\AndroidStudioProjects\MyApplication5\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_90fff47c448e7f4e86ecc7baa4c6472df4c6d288 C:\Users\MugenKlaus\AndroidStudioProjects\MyApplication5\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\Java\jre1.8.0_25\bin;C:\Program Files\Java\jdk1.8.0_25\bin;C:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\Git\bin;C:\Python34;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files (x86)\Skype\Phone\;
+USERNAME=MugenKlaus
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 21 Model 48 Stepping 1, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 8 , 64 bit Build 9200 
+
+CPU:total 4 (4 cores per cpu, 1 threads per core) family 21 model 48 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, mmxext, 3dnowpref, lzcnt, sse4a, tsc, tscinvbit, tscinv
+
+Memory: 4k page, physical 8327772k(1251496k free), swap 9376348k(5096k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (24.75-b04) for windows-amd64 JRE (1.7.0_75-b13), built on Dec 18 2014 17:15:01 by "java_re" with unknown MS VC++:1600
+
+time: Wed May 04 23:51:40 2016
+elapsed time: 0 seconds
+
